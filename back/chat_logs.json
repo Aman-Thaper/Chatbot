@@ -1,0 +1,344 @@
+[
+  {
+    "timestamp": "2025-06-20T10:36:13.587Z",
+    "user": "hey",
+    "ai": "Hello there! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T10:36:30.466Z",
+    "user": "I need information about leave management ",
+    "ai": "To help you with leave management, I need to know what specifically you'd like to know.  Are you an employee or a manager?  The available options depend on your role.  For example, employees can access their Leave Register, apply for Comp Off, check their WFH/OD records, and cancel leave. Managers have access to additional features like approving/rejecting leave requests, adding comp-off, and generating reports.\n\n\n📌 **You may find more info in these sections:**\n\n🔗 1. [Leave Management](https://talenticks.meetcs.com/leaveconfiguration/leavecredit)",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T10:36:55.983Z",
+    "user": "where can I mark WFH for some days",
+    "ai": "Yes, you can mark WFH for multiple days.  Click on the down arrow next to the check-in and check-out button, then select the date range to mark WFH/OD.\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T10:37:04.887Z",
+    "user": "okay",
+    "ai": "Great! Is there anything else I can help you with today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T10:51:35.399Z",
+    "user": "hey",
+    "ai": "Hello there! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T10:51:55.362Z",
+    "user": "hey",
+    "ai": "Hello there! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T10:52:24.133Z",
+    "user": "hello",
+    "ai": "Hello! 👋 Welcome to Talenticks. How can I assist you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T10:54:32.034Z",
+    "user": "Lnd Policy",
+    "ai": "The Learning & Development (L&D) policy outlines MEETCS's commitment to fostering a continuous learning culture.  It applies to all permanent full-time and part-time employees, with temporary/contract staff participation requiring managerial approval.  The policy details roles and responsibilities for employees, managers, and HR, and covers various training delivery methods, including formal sessions, OJT, e-learning, and external resources.  Training categories include technical, managerial, and soft skills, as well as professional certifications.  Eligibility for individual training programs requires a minimum of 6 months of employment, and company-sponsored mandatory training is fully funded.  The policy also explains the procedure for applying for external training, including reimbursement after completion (with a 2-year post-certification service requirement).  More details are available in the full L&D policy document accessible through the Onboarding > Company Policies section.\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T10:57:20.511Z",
+    "user": "hey",
+    "ai": "Hello there! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:02:11.331Z",
+    "user": "I want to check the leaves of employees under me",
+    "ai": "To check the leaves of your employees, you need to go to the **Leave Management** section and then select **Leave Dashboard Mgr** or **Mgr Leave Report**.\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:02:57.618Z",
+    "user": "how can I download all employees payslips",
+    "ai": "This question is not covered in the provided documentation.  There is information on downloading *your own* payslips, but not on downloading payslips for all employees.\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:04:54.158Z",
+    "user": "I want to download payslips",
+    "ai": "To download your payslips, click on the \"Payslip\" submenu located within the \"Finance\" menu.\n\n\n📌 **You may find more info in these sections:**\n\n🔗 1. [- Payslip](https://talenticks.meetcs.com/payroll/payslip)\n\n🔗 2. [- Latest Payslip](https://talenticks.meetcs.com/payroll/payslip/new_payslip)",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:16:42.771Z",
+    "user": "good morninf",
+    "ai": "Good morning!  How can I assist you?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:16:55.465Z",
+    "user": "goodmorning",
+    "ai": "Good morning! How can I assist you?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:18:03.839Z",
+    "user": "how are you",
+    "ai": "I'm doing well, thank you for asking! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:18:11.885Z",
+    "user": "what",
+    "ai": "What is your question or what information are you looking for?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:20:55.140Z",
+    "user": "helloooo",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:23:23.648Z",
+    "user": "helloo",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:24:48.731Z",
+    "user": "heyy",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:25:02.762Z",
+    "user": "what are u",
+    "ai": "I am an AI assistant for the Talenticks HRM platform.  I can answer your questions based on the company's policies and FAQs.\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:35:07.045Z",
+    "user": "heyy",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:38:11.499Z",
+    "user": "hey",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:38:17.434Z",
+    "user": "hey",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:39:46.630Z",
+    "user": "hey",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:46:30.122Z",
+    "user": "heyy",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:46:46.728Z",
+    "user": "hi",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:46:54.934Z",
+    "user": "hi",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:47:19.381Z",
+    "user": "hi",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:57:24.492Z",
+    "user": "hey",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:58:00.123Z",
+    "user": "hello",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:58:13.972Z",
+    "user": "why are you restarting",
+    "ai": "I am not restarting.  I am a large language model, and I don't have the capacity to restart in the way a computer program might.  Each of my responses is generated independently based on your input and my training data.  If you're experiencing issues or unexpected behavior, please describe the problem so I can try to help.\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:58:22.062Z",
+    "user": "?",
+    "ai": "I apologize for the previous unresponsive behavior.  I am a large language model, and sometimes my responses are interrupted or restarted due to technical issues on the server side.  Is there anything I can help you with?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:58:28.308Z",
+    "user": "?",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T11:58:43.363Z",
+    "user": "what is L and D policy",
+    "ai": "The MEETCS Learning & Development Policy aims to foster a continuous learning culture.  It applies to all permanent full-time and part-time employees, with temporary/contract staff participation requiring managerial approval.  The policy outlines roles and responsibilities for employees, managers, and HR,  details training delivery methods (formal sessions, OJT, e-learning, etc.), training categories (technical, managerial, soft skills, certifications), and procedures for applying for external training, including reimbursement processes and eligibility criteria.  More specifics are available in the full policy document.\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T12:14:20.014Z",
+    "user": "hey",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T12:14:29.219Z",
+    "user": "how are you",
+    "ai": "I'm doing well, thank you for asking! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T12:20:53.129Z",
+    "user": "hey",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  },
+  {
+    "timestamp": "2025-06-20T12:21:04.034Z",
+    "user": "hey",
+    "ai": "👋 Hello! How can I help you today?\n",
+    "roleIds": [
+      2,
+      10
+    ]
+  }
+]

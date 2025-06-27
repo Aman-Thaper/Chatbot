@@ -1,0 +1,194 @@
+[
+    {
+        "question": "What should I do if I have forgotten my Password?",
+        "answer": "You can set your password again using Forgot password option available on Login Page or can request an HR/ Admin to reset your Password. "
+    },
+    {
+        "question": "Why can’t I log in?",
+        "answer": "Please ensure that your user id and password is entered correctly. If you have forgotten the password, please select the option of forgot password on the TalenTicks login page."
+    },
+    {
+        "question": "Why can’t I change my name or date of birth?",
+        "answer": "Only Admin and/or HR has the right to change anyone’s name and date of birth. You can request the Admin/HR for changing your name or your date of birth with some documents as proof."
+    },
+    {
+        "question": "How can I upload my Profile Picture in TalenTicks?",
+        "answer": "Click on the Profile image link present in the top row. You can also click on the “eye” icon on the “My \r\nProfile” page. This page opens when you click on your name on the side menu.  Upload your profile picture by clicking the camera icon.\r\n"
+    },
+    {
+        "question": "How can I update my personal and professional details?",
+        "answer": "After logging in to the TalenTicks, you can update your personal and professional\r\ndetails by clicking on the ”Complete Your Profile” button. A detailed tab list opens up where you can enter all your details.\r\n"
+    },
+    {
+        "question": "From where I can add/remove multiple widgets?",
+        "answer": " Click on the desktop Icon, on the top bar, to view the list of available widgets.  You can check and uncheck the widgets you want on your dashboard.\r\n\r\n"
+    },
+    {
+        "question": "How can I mark WFH/OD in TalenTicks?",
+        "answer": "Click on the down arrow present aside the check-in and check-out button. Choose the dates on the opened pop-up and the reason for WFH/OD."
+    },
+    {
+        "question": "Can I mark WFH for multiple days?",
+        "answer": "Yes, click on the down arrow present aside the check in and check out button then select date range to mark WFH/OD."
+    },
+    {
+        "question": "Can I check my Assigned Shifts?",
+        "answer": "Yes, click on My Shift present under Shift Menu on the sidebar"
+    },
+    {
+        "question": "From where can I view the Company Policies?",
+        "answer": "Go to Onboarding menu and click on Company Policies to get all the Uploaded policies."
+    },
+    {
+        "question": "Will I get notified if HR updates any existing policy or uploads a new policy?",
+        "answer": "Yes, you will get a notification via Notification Bell icon present on the TalenTicks topbar.\r\n\r\n"
+    },
+    {
+        "question": "How can I see all the listed Holidays for the year?",
+        "answer": "Click on the Holidays Button Present on the TalenTicks Dashboard to see the list of Holidays for the year. Holidays can also be seen on the Dashboard Calendar."
+    },
+    {
+        "question": "What does it mean if it shows absent on Dashboard Calendar?",
+        "answer": "Your In and Out time is missing or maybe you are absent on that day and  have   forgotten to mark Leave."
+    },
+    {
+        "question": "Why it is showing not checked out for a particular date on Dashboard Calendar?",
+        "answer": "This means that your out time has not been captured in TalenTicks HRMS. It could be because you might have forgotten to  checkout."
+    },
+    {
+        "question": "Why is it showing WHNC for a particular date on the Dashboard Calendar?",
+        "answer": "This is because your working hours for that day are less than the required working hours for a full day working."
+    },
+    {
+        "question": "How do I Check-in and Check-out if I am working from Home?",
+        "answer": "You can Check-in via Check in Button available on the Dashboard after sending the WFH request. "
+    },
+    {
+        "question": "How can I check my Attendance data?",
+        "answer": "After Logging in, click on the Attendance Report sub-menu available in Leave and Attendance Menu or you can view the attendance data on Dashboard Calendar."
+    },
+    {
+        "question": "What should I do if the Check In button is not visible?",
+        "answer": "Do Check In/Check Out from the biometric machine or regularize for the day."
+    },
+    {
+        "question": "Why is the Check In button not visible?",
+        "answer": "Your organisation’s branch from where you are working does not have the Check In/Check Out feature. You have to mark your attendance from the biometric device."
+    },
+    {
+        "question": "What do I do if my attendance record is incorrect?",
+        "answer": "After logging in, you can click on Attendance Report submenu in Leave and Attendance menu of TalenTicks. Here, you can raise an Attendance Regularization request for an incorrect attendance by clicking on Regularize Attendance. Mention the correct in-time, out-time and the reason for which you want to regularize the attendance. Also, mention details in Remarks if needed. Once you fill in all the information, submit the same to your manager for approval."
+    },
+    {
+        "question": "How can I apply for Attendance Regularisation?",
+        "answer": "After logging in, you can click on Attendance Report in Leave and Attendance menu of TalenTicks. Here, you can raise an Attendance Regularization request for an incorrect attendance by clicking on Regularize Attendance. Mention the correct in-time, out-time and the reason for which you want to regularize the attendance. Also, mention details in Remarks if needed. Once you fill in all the information, submit the same to your manager for approval."
+    },
+    {
+        "question": "Can I track the status of my Attendance Regularisation requests?",
+        "answer": "Yes, you get notified through notification bell icon on Dashboard. You can also view and track status of the Attendance Regularisation request by visiting the Attendance Report in Leave and Attendance Module or from Dashboard Calendar. The status column will show the status as awaiting for approval/approved/rejected – depending on the action taken/not taken by the manager."
+    },
+    {
+        "question": "How can I check my leave balance?",
+        "answer": "After Logging in to the TalenTicks HRMS, click on the desktop icon in the topbar. Select Leave Stats option from the list of available widgets. Leave Stats block will get added on your Dashboard. This block has all the details of the available leave and availed leaves."
+    },
+    {
+        "question": "How can I apply for leaves?",
+        "answer": "After Logging in to TalenTicks HRMS, in the Leave and Attendance Module select the “Leave Register” sub-menu and click on the date for which you want to apply the desired eligible/ available leave. In the pop-up that opens up, fill the details of type of leave, dates and the reason for the leave. Once filled, submit the same for an approval to your manager."
+    },
+    {
+        "question": "Can I track the status of applied leave? ",
+        "answer": "Yes, you get notified through email and the notification bell icon on Dashboard. You can also view and track the status of the Leave request by visiting the Leave Register in Leave and Attendance Module and then click on View Leave. The status column will show awaiting/approved/rejected based on the action taken/non taken by the manager."
+    },
+    {
+        "question": "Why it is showing “Your leave balance has been exhausted.”  when I apply for Leave?",
+        "answer": "It means that the available leave balance is less than the total number of days for which you are trying to apply leave for.\r\n\r\n"
+    },
+    {
+        "question": "Why it is showing “You cannot apply for leave on a Weekly off day or a holiday” when I apply for Leave?",
+        "answer": "It means you are trying to apply leave for a day which is already a Public/Optional Holiday or a  Weekly Off for you.\r\n\r\n"
+    },
+    {
+        "question": "Why it is showing “You can apply this leave Only on Birthday or Wedding Anniversary”\r\nwhen I apply for Leave?\r\n",
+        "answer": "It means this particular type of leave is allowed only on your Birthday/ Wedding Anniversary Date.\r\n\r\n"
+    },
+    {
+        "question": "Why it is showing “You have to take a minimum number of days for this leaves” when I apply for Leave?",
+        "answer": "It means the minimum number of leave days required to apply for that type of leave is more than the days you are trying to apply for. To check the minimum requirement, refer to Leave Rules in Company Policy."
+    },
+    {
+        "question": "Why it is showing “You can take a maximum number ‘n’ days for this leaves” when I apply for Leave?",
+        "answer": "It means the maximum number of leave days required to apply for that type of leave is less than the days you are trying to apply for. To check the maximum requirement, refer to Leave Rules in Company Policy."
+    },
+    {
+        "question": "It is showing “certificate required for this leave” when I apply for Leave?",
+        "answer": "Attach Medical Certificate and then Apply."
+    },
+    {
+        "question": "Why it is showing “Your monthly leave allowed balance has been exhausted” even if\r\nthe Leave balance is available?\r\n",
+        "answer": "It means the limit of maximum no. of leave to apply per month has been utilized. To check the count, refer to the Leave Rules in Company Policy."
+    },
+    {
+        "question": "Why it is showing “You have already applied for leave on these dates. Please check your leave history” when I apply for Leave?",
+        "answer": "The Date Range you selected to apply leave has a date on which leave is already marked for you. Select Proper Dates to mark new Leaves."
+    },
+    {
+        "question": "What do I do if the Leave I have marked is incorrect?",
+        "answer": "After logging in, you can click on Cancel Leave menu available in Leave and Attendance Module of the TalenTicks HRMS. Here, you can click on Cancel option available in Cancel Column. You can cancel the Leaves only if it is in Awaiting Status for Approval. To cancel Approved Leave, you can Request Manager/ HR till the actual leave date. Once the applied leave date is passed, only Admin/HR can cancel the leave."
+    },
+    {
+        "question": "How can I apply for Comp-Off (Compensatory Leave)?",
+        "answer": "After Logging in to the TalenTicks HRMS, in the Leave and Attendance Module click on the “Apply Comp Off” menu item.  Click on the apply option in Action Column for any of the days you have worked extra for.  "
+    },
+    {
+        "question": "How can I check my TDS Calculation?",
+        "answer": "After Logging in, click on My TDS Calculation submenu available in Finance Menu. The page shows month-wise TDS calculations."
+    },
+    {
+        "question": "How can I get my Payslips?\r\n",
+        "answer": "Click on Payslip submenu available in Finance Menu."
+    },
+    {
+        "question": "Can I download multiple payslips?",
+        "answer": "Yes, click on Payslip submenu available in Finance Menu. Select multiple payslips and click on Bulk Download option."
+    },
+    {
+        "question": "From where can I get Form 16?",
+        "answer": "Click on Form16 submenu available in Finance Menu.\r\n\r\n"
+    },
+    {
+        "question": "How can I add my investments amount?",
+        "answer": "Click on My Investment Declaration submenu available in Finance Menu. Mention the amount you want to invest under each section, in Declared Amount Column and Click on Update. Submit the full page once all the relevant amounts are updated."
+    },
+    {
+        "question": "What do I do if I don’t get an option to add Investment Amount in My Investment\r\nDeclaration Page?\r\n",
+        "answer": "First select Old / New Regime from “VIEW TAX REGIME” Option. Once that is selected, based on the selected regime, you will be able to access the “My Investment” page."
+    },
+    {
+        "question": "Why is the total amount declared in My Investment Declaration  Page not considered for Tax Calculation?",
+        "answer": "Check the Max Amount Allowed to be considered for tax Calculation under each Section. The maximum amount that will be considered has to be less than or equal to the “Max Amount Allowed”. This is as per the government rules.\r\n\r\n"
+    },
+    {
+        "question": "How can I view my Salary Structure?",
+        "answer": "Click on My Salary Details menu item present in Finance Menu."
+    },
+    {
+        "question": "From where can I see my assigned Grade and Band.",
+        "answer": "Click on My Salary Details menu item present in Finance Menu. The Grade and band is mentioned next to the Gross/CTC etc."
+    },
+    {
+        "question": "How to calculate my monthly salary if I have some LWP’s?",
+        "answer": "Divide the annual salary by 12 and then divide the monthly value with the number of  days of that month (30/31 or depending on leap year, the amount for February can be 28/29). Multiply the value with my Payable days, i.e. monthly days – the LWP days."
+    },
+    {
+        "question": "How can I Create a Request to get Reimbursement?",
+        "answer": "Click on Reimbursement Expense menu item present in Finance Menu and click on Create New Request option. Fill in the details of the project, travel, food, stay etc. Attach the receipts. After filling, submit to the manager for approval. "
+    },
+    {
+        "question": "Can I track the status of Reimbursement Requests?",
+        "answer": "Yes, click on the Reimbursement Expense tab present in Finance Menu where you will get to see the Pending/ Rejected along with their status and Approved Requests."
+    },
+    {
+        "question": "Where and When to Submit Proofs for Declared Investments Amount?",
+        "answer": "The Proof submission window will be open by an HR and a column will be visible to add proof amount and a proof document."
+    }
+]

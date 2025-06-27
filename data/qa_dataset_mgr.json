@@ -1,0 +1,131 @@
+[
+    {
+      "question": "How can I approve leave requests of my reporting team members?",
+      "answer": "Click on Approve/ Reject Leave submenu in the Leave & Attendance Menu in the Sidebar. A list of applied leaves by all your team members would be seen. Click on the Green Tick in the Action Column to Approve the respective Leave Request. You can select the checkbox of more than one leave request and then click on “Bulk Approve” Button as well to approve many leaves in one go."
+    },
+    {
+      "question": "How can I reject leave requests for my reporting team members?",
+      "answer": "Click on Approve/ Reject Leave submenu in the Leave & Attendance Menu in the Sidebar. A list of applied leaves by all your team members would be seen. Click on the cross button in the Action Column to Reject the respective Leave Request."
+    },
+    {
+      "question": "How can I see the Attendance Records of my reporting team members?",
+      "answer": "Click on the Regularize submenu under Leave & Attendance menu in the sidebar. A table showing the attendance records for all your reporting team members for this pay cycle would be seen. Select the relevant filters to check the attendance report of a specific team member."
+    },
+    {
+      "question": "How can I approve/reject regularisation requests from my reporting team members?",
+      "answer": "Click on the Regularize submenu under Leave & Attendance menu in the sidebar.  A table showing the attendance records for all your reporting team members for this pay cycle would be seen. Click on the Approve/ Reject option available in the Regularize Column for the specific regularization request. It is possible to select multiple rows through the checkboxes given in the first column and approve regularisation requests in bulk using the “Bulk Approve” button."
+    },
+    {
+      "question": "Why it is showing as (-) in the Regularize Column on the dates Employees has sent a Regularization Request?",
+      "answer": "Because the Cut-off date to take any action by the manager on these Requests for that pay cycle has passed."
+    },
+    {
+      "question": "Can I multi-select the Regularization requests and do Bulk Approval?",
+      "answer": "Yes, Click on the Regularize submenu under Leave & Attendance Management menu in the sidebar.  A table showing the attendance records for all your reporting team members for this pay cycle would be seen. Select multiple rows through the checkboxes given in the first column and approve regularisation requests in bulk using the “Bulk Approve” button."
+    },
+    {
+      "question": "How will I come to know if my reporting team member has sent a regularisation request?",
+      "answer": "You will be notified via the Notification Bell icon present on the Dashboard."
+    },
+    {
+      "question": "How will I come to know if my reporting team member has sent a leave request?",
+      "answer": "You will be notified via the Notification Bell icon present on the Dashboard and also on your corporate email address."
+    },
+    {
+      "question": "Why is the Reason for Leave showing blank for a leave Request sent by an Employee?",
+      "answer": "Reason for Leave shows Blank if HR has directly Uploaded the Leave for the Employee and it’s not actually applied by the employee himself/herself on TalenTicks HRMS"
+    },
+    {
+      "question": "How can I Add Comp- Off (Compensatory Leave) for my reporting employee who has worked on a weekly off or a holiday?",
+      "answer": "Click on the Comp-Off submenu under the Leave & Attendance menu. Select the employee from the dropdown list, add the date on which the employee worked, add the in-time and out-time. And if the time added is less than full day hours then the employee can apply for half day Comp- Off only. Click on Add Comp-off button. The added comp-off details should be seen in the table below."
+    },
+    {
+      "question": "Can I check all the Comp Offs added for an Employee?",
+      "answer": "Yes, Click on the Comp-Off submenu under the Leave & Attendance menu. There is a list of all added Compensatory Leaves below the addition section."
+    },
+    {
+      "question": "What should I do if I want to Reject/ Cancel any approved leaves from my reporting team member?",
+      "answer": "Click on the Approve/ Reject Leave submenu in the Leave & Attendance menu in the sidebar. Click on the cross icon in the Action Column in the respective row to Reject a particular leave and click on the minus icon in the Action Column in the respective row to cancel a particular leave."
+    },
+    {
+      "question": "Can I multi-select the Leave Requests and do Bulk Approval?",
+      "answer": "Yes, Click on Approve/ Reject Leave submenu in the Leave & Attendance Menu in the Sidebar. A list of applied leaves by all your team members would be seen. You can select the checkbox of more than one leave request and then click on “Bulk Approve” Button as well to approve many leaves in one go."
+    },
+    {
+      "question": "How do I check the Summary of all the leave count of my reporting team members?",
+      "answer": "Click on the Leave Dashboard Mgr submenu in Leave & Attendance menu in the sidebar. Click on the i button to check the Leave Stats for each reporting team member."
+    },
+    {
+      "question": "How can I accept the WFH/OD request from my reporting team member?",
+      "answer": "Click on the Approve/ Reject WFH/OD request submenu in the Leave and Attendance menu. The list of all WFH/OD requests can be seen here. Click on the Accept button to approve the requests."
+    },
+    {
+      "question": "How do I check my team member’s reimbursement requests?",
+      "answer": "Click on Mgr. Reimbursement Approval menu under Finance Section. The list of all the reimbursement requests raised by your reporting team members are visible in a table on this page. Click on the “eye” icon to check the details including any attachments added by the employee."
+    },
+    {
+      "question": "How do I check the status of Reimbursement requests sent by an Employee?",
+      "answer": "Click on Mgr. Reimbursement Approval menu under Finance Section. The list of all the reimbursement requests raised by your reporting team members are visible in a table on this page. The status for all these requests will be visible in the Status Column."
+    },
+    {
+      "question": "How can I fill the Due Clearance form for an Exiting Employee?",
+      "answer": "Click on the Manager Exit Process menu in the Exit Process Section. Select the exiting employee, fill the due clearance details and submit the data."
+    },
+    {
+      "question": "How will I get to know if the Exit process has been initiated for my reporting team member?",
+      "answer": "You will get a notification via the Notification Bell Icon on TalenTicks Dashboard."
+    },
+    {
+      "question": "How can I add my remarks as a manager after the exit process has been initiated for one of my reporting team members?",
+      "answer": "Click on the Manager Exit Process menu in the Exit Process Section. Select the exiting employee and click on Add Remark."
+    },
+    {
+      "question": "How can I reject the WFH/OD request of my Team?",
+      "answer": "Click on the Approve/ Reject WFH/OD request submenu in the Leave and Attendance menu. The list of all WFH/OD requests can be seen here. Click on the Reject button to reject the requests."
+    },
+    {
+      "question": "How can I get to know on which date my reporting team member has done WFH or was working from client site?",
+      "answer": "Click on the Approve/ Reject WFH/OD request submenu in the Leave and Attendance menu. The list of all WFH/OD requests can be seen here. This table will have all the data about the dates when your team members have applied for WFH/OD."
+    },
+    {
+      "question": "•\tHow will I get to know if my reporting team member has marked WFH/OD?",
+      "answer": "You get a notification via the Notification Bell Icon on TalenTicks Dashboard"
+    },
+    {
+      "question": "How can I Approve/Reject the timesheet of my reporting team member?",
+      "answer": "Click on Timesheet approval menu in the Timesheet Section. The list of all the submitted timesheets for all your reporting employees will be seen. Click on View link to view the details filled by your reporting team members. If you agree with all the details filled by the team member, click on the Approve button to approve it, else click on Reject button to reject it. On rejecting the timesheet, you will have to give a reason as well for rejection."
+    },
+    {
+      "question": "How can I add a new project to Timesheet?",
+      "answer": "Click on Timesheet approval menu in the Timesheet Section. Click on Create Project button. Add the details of the project and submit."
+    },
+    {
+      "question": "How can I see the details of all the  Projects for which I am the manager?",
+      "answer": "Click on Timesheet approval menu in the Timesheet Section. A brief list of projects can be seen on the left side of the page. Click on “View all” button on this section. The page with all projects for which you are the manager would be seen as a list."
+    },
+    {
+      "question": "How can I get all the timesheet reports and my team’s efforts?",
+      "answer": "Click on Timesheet approval submenu in the Timesheet Section. Under Timesheet Report section, click on the required tab. Select the relevant date range of the employee and generate the report. The report will give task-wise, project-wise or employee wise effort details."
+    },
+    {
+      "question": "How can I add/remove users in the Project whose manager I’m?",
+      "answer": "Click on Timesheet approval submenu in the Timesheet Section. A brief list of projects can be seen on the left side of the page. Click on “View all” button on this section. The page with all projects for which you are the manager would be seen as a list. Click on the three small lines next to the project name. Choose project details from the dropdown list. The page now shows the details of the project with tasks and users. Click on Add Users. Choose the users you want to add in the project on the pop-up that opened. You can remove the users as well from the same pop-up."
+    },
+    {
+      "question": "How can I add a new task to the Project?",
+      "answer": "Click on Timesheet approval submenu in the Timesheet Section. A brief list of projects can be seen on the left side of the page. Click on “View all” button on this section. The page with all projects for which you are the manager would be seen as a list. Click on the three small lines next to the project name. Choose project details from the dropdown list. The page now shows the details of the project with tasks and users. In the Create Task section on top right side of the page, add the new tasks."
+    },
+    {
+      "question": "How can I extend the end date of the project?",
+      "answer": "Click on Timesheet approval submenu in the Timesheet Section. A brief list of projects can be seen on the left side of the page. Click on “View all” button on this section. The page with all projects for which you are the manager would be seen as a list. Click on the three small lines next to the project name. Choose Edit Project from the dropdown. On the Project details page that opens up, change the end date of the project. Click on Save to save the changes."
+    },
+    {
+      "question": "How can I deactivate/delete any task from the Task List?",
+      "answer": "Click on Timesheet approval submenu in the Timesheet Section. A brief list of projects can be seen on the left side of the page. Click on “View all” button on this section. The page with all projects for which you are the manager would be seen as a list. Click on the three small lines next to the project name. Choose Deactivate Project from the dropdown list."
+    },
+    {
+      "question": "How can I activate the deactivated task?",
+      "answer": "Click on Timesheet approval submenu in the Timesheet Section. A brief list of projects can be seen on the left side of the page. Click on “View all” button on this section. The page with all projects for which you are the manager would be seen as a list. Click on the three small lines next to the project name. Choose Activate Project from the dropdown list."
+    }
+]
+  
