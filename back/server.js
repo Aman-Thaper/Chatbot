@@ -313,10 +313,10 @@ app.get('/sections', async (req, res) => {
   }
 });
 
-async function startup() {
+async function startup(roleIds) {
   try {
     await initializeRoleNames();
-    sectionHierarchy = await getSectionHierarchyString([2, 10, 7]);
+    sectionHierarchy = await getSectionHierarchyString(roleIds);
 
     // Load all data sources in parallel
     await Promise.all([
@@ -338,5 +338,17 @@ async function startup() {
     process.exit(1);
   }
 }
+app.post('/startup', async (req, ) => {
+  let {  roleIds } = req.body;
 
-startup()
+    // Normalize roleIds to an array of numbers
+    if (typeof roleIds === 'string') {
+      roleIds = roleIds.split(',').map(Number);
+    } else if (Array.isArray(roleIds)) {
+      roleIds = roleIds.map(Number);
+    } else {
+      // Fallback in case something unexpected comes in
+      roleIds = [2, 10, 7];
+    }
+  startup(roleIds)
+})
