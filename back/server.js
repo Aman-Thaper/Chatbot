@@ -51,7 +51,7 @@ let sectionEmbeddings = []
 async function loadAndEmbedDocuments() {
   try {
     documentChunks = [];
-    const filePath = path.join(__dirname,'..','data', 'policy_vectors2.json');
+    const filePath = path.join(__dirname, '..', 'data', 'policy_vectors2.json');
     const fileContent = await fs.readFile(filePath, 'utf8');
     documentChunks = JSON.parse(fileContent);
     console.log(`✅ Loaded ${documentChunks.length} policy chunks with embeddings from policy_vectors2.json`);
@@ -121,10 +121,10 @@ app.get('/health', async (req, res) => {
 
   // Critical failures
   const isUnhealthy = documentChunks.length === 0 || sectionEmbeddings.length === 0;
-  
+
   // Non-critical warnings
   const emptyFaqs = [faqVectorsEmp, faqVectorsMgr, faqVectorsHr].filter(arr => arr.length === 0);
-  
+
   if (isUnhealthy) {
     healthCheck.status = 'unhealthy';
   } else if (emptyFaqs.length > 0) {
@@ -163,18 +163,29 @@ app.post('/employee_validator', async (req, res) => {
 // Chat Endpoint
 app.post('/chat', async (req, res) => {
   try {
-    const { messages, roleIds = [2, 10, 7], emp_code } = req.body;
-    // If emp_code is provided, validate employee before proceeding
-    if (emp_code) {
-      const validationResult = await employee_validation(emp_code);
-      if (!validationResult.valid) {
-        return res.json({
-          text: '❌ You are not a valid employee. Please contact HR or check your credentials.',
-          notValidEmployee: true,
-          ...validationResult
-        });
-      }
+    let { messages, roleIds } = req.body;
+
+    // Normalize roleIds to an array of numbers
+    if (typeof roleIds === 'string') {
+      roleIds = roleIds.split(',').map(Number);
+    } else if (Array.isArray(roleIds)) {
+      roleIds = roleIds.map(Number);
+    } else {
+      // Fallback in case something unexpected comes in
+      roleIds = [2, 10, 7];
     }
+    // If emp_code is provided, validate employee before proceeding
+    // if (emp_code) {
+    //   const validationResult = await employee_validation(emp_code);
+    //   if (!validationResult.valid) {
+    //     return res.json({
+    //       text: '❌ You are not a valid employee. Please contact HR or check your credentials.',
+    //       notValidEmployee: true,
+    //       ...validationResult
+    //     });
+    //   }
+    // }
+
     const lastUserMsg = [...messages].reverse().find(m => m.role === 'user')
     if (!lastUserMsg) return res.status(400).json({ text: 'No user message found.' })
 
@@ -183,6 +194,7 @@ app.post('/chat', async (req, res) => {
 
     // Use the correct FAQ vectors for the current roleIds
     const faqsToUse = getFaqVectorsForRoles(roleIds);
+    console.log(faqsToUse)
     const qaScored = faqsToUse.map(pair => ({
       ...pair,
       score: cosineSimilarity(queryEmbedding, pair.embedding)
@@ -207,7 +219,7 @@ You are an AI assistant for the Talenticks HRM platform.
 Answer based on the company policies and FAQs. If the answer is not available, reply honestly.
 Always prioritize matching Q&A if available.
 If the threshold is crossed just use the answer from FAQ instead of trying to answer from context. Don't try too hard if the answer is already found from policies or FAQ.
-If the user sends a greeting like "hi", "hello", "hey", "greetings", "good morning", "good afternoon", "good evening", etc. just reply with a message "👋 Hello! How can I help you today?"
+
 
 📚 Section Hierarchy:
 ${sectionHierarchy}
@@ -305,7 +317,7 @@ async function startup() {
   try {
     await initializeRoleNames();
     sectionHierarchy = await getSectionHierarchyString([2, 10, 7]);
-    
+
     // Load all data sources in parallel
     await Promise.all([
       loadSectionEmbeddings(),

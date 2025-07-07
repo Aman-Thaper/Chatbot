@@ -24,7 +24,7 @@ export let faqVectorsHr = [];
 
 export async function loadAllFaqVectors() {
   try {
-    faqVectorsEmp = JSON.parse(await fs.readFile(path.join(__dirname,'..', 'data', 'faq_vectors_emp.json'), 'utf8'));
+    faqVectorsEmp = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'data', 'faq_vectors_emp.json'), 'utf8'));
     faqVectorsMgr = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'data', 'faq_vectors_mgr.json'), 'utf8'));
     faqVectorsHr = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'data', 'faq_vectors_hr.json'), 'utf8'));
     console.log(`✅ Loaded FAQs - Emp:${faqVectorsEmp.length} Mgr:${faqVectorsMgr.length} HR:${faqVectorsHr.length}`);
@@ -275,8 +275,8 @@ export async function getFAQsByRoles(roleIds) {
 
 function getFaqVectorsForRoles(roleIds) {
   // Always include employee FAQ
+  // See what it actually is
   let faqs = [...faqVectorsEmp];
-
   // Manager: 10 or 13
   if (roleIds.includes(10) || roleIds.includes(13)) {
     faqs = faqs.concat(faqVectorsMgr);
@@ -288,7 +288,7 @@ function getFaqVectorsForRoles(roleIds) {
   }
 
   // Other roles: access to all
-  const specialRoles = [2, 7, 10, 13, 15];
+  const specialRoles = roleIds;
   if (!roleIds.every(id => specialRoles.includes(id))) {
     faqs = [...faqVectorsEmp, ...faqVectorsMgr, ...faqVectorsHr];
   }
@@ -296,4 +296,4 @@ function getFaqVectorsForRoles(roleIds) {
   return faqs;
 }
 
-export { getFaqVectorsForRoles};
+export { getFaqVectorsForRoles };
