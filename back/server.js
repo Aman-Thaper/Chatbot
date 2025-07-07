@@ -16,6 +16,8 @@ import {
   faqVectorsMgr,
   faqVectorsHr
 } from './sql_js.js'
+import cors from 'cors';
+app.use(cors());
 
 const START_TIME = new Date();
 const VERSION = process.env.npm_package_version || '1.0.0';
