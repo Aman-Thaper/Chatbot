@@ -353,4 +353,8 @@ async function startup(roleIds) {
 //   startup(roleIds)
 
 // })
-startup(roleIds)
+startup([2, 10, 7]) // Default roles if not specified
+  .catch(err => {
+    console.error('❌ Failed to start server:', err);
+    process.exit(1);
+  });
