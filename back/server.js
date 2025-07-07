@@ -332,23 +332,25 @@ async function startup(roleIds) {
     console.log(`- Manager FAQs: ${faqVectorsMgr.length}`);
     console.log(`- HR FAQs: ${faqVectorsHr.length}`);
 
-   app.listen(port, '0.0.0.0', () => console.log(`🚀 Server running on http://0.0.0.0:${port}`));
+    app.listen(port, '0.0.0.0', () => console.log(`🚀 Server running on http://0.0.0.0:${port}`));
   } catch (err) {
     console.error('❌ Startup failed:', err);
     process.exit(1);
   }
 }
-app.post('/startup', async (req, ) => {
-  let {  roleIds } = req.body;
+// app.post('/startup', async (req,) => {
+//   let { roleIds } = req.body;
 
-    // Normalize roleIds to an array of numbers
-    if (typeof roleIds === 'string') {
-      roleIds = roleIds.split(',').map(Number);
-    } else if (Array.isArray(roleIds)) {
-      roleIds = roleIds.map(Number);
-    } else {
-      // Fallback in case something unexpected comes in
-      roleIds = [2, 10, 7];
-    }
-  startup(roleIds)
-})
+//   // Normalize roleIds to an array of numbers
+//   if (typeof roleIds === 'string') {
+//     roleIds = roleIds.split(',').map(Number);
+//   } else if (Array.isArray(roleIds)) {
+//     roleIds = roleIds.map(Number);
+//   } else {
+//     // Fallback in case something unexpected comes in
+//     roleIds = [2, 10, 7];
+//   }
+//   startup(roleIds)
+
+// })
+startup(roleIds)
