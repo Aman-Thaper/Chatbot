@@ -172,7 +172,7 @@ export async function employee_validation(emp_code) {
   const connection = await getConnection();
   try {
     const [rows] = await connection.execute(
-      `SELECT firstname, emp_code, is_active FROM tt_data.tt_empmst WHERE emp_code = ? LIMIT 1`,
+      `SELECT firstname, emp_code, is_active FROM tt_empmst WHERE emp_code = ? LIMIT 1`,
       [emp_code]
     );
     if (rows.length === 0) {
