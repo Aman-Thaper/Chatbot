@@ -16,6 +16,7 @@ import {
   faqVectorsMgr,
   faqVectorsHr
 } from './sql_js.js'
+import Fuse from 'fuse.js';
 
 
 const START_TIME = new Date();
@@ -255,37 +256,51 @@ ${topQAMatch ? `💡 Matching Q&A:\nQ: ${topQAMatch.question}\nA: ${topQAMatch.a
 
     let aiReply = chatResponse.response.text()
 
-    const sectionLinks = new Map()
-
-    console.log('🧠 Relevant Sections:', relevantSections.map(s => s.name))
-    console.log('🎭 Using roleIds:', roleIds)
-
-    for (const section of relevantSections) {
-      try {
-        console.log(`🔍 Checking section: "${section.name}"`)
-        const url = await getSectionLink(section.name,BaseUrl)
-        if (url && !url.includes('not available to your role')) {
-          sectionLinks.set(section.name, url)
-          console.log(`✅ Link found: ${url}`)
-        } else {
-          console.log(`❌ ${section.name} is not available to this role`)
+    // --- Fuzzy matching for section names in aiReply ---
+    const allSectionNames = sectionEmbeddings.map(sec => sec.name);
+    const fuse = new Fuse(allSectionNames, {
+      includeScore: true,
+      threshold: 0.2, // Lower = stricter, higher = fuzzier
+    });
+    const referencedSections = new Set();
+    // Try matching all possible n-grams up to 4 words
+    const aiWords = aiReply.split(/\s+/);
+    for (let n = 4; n >= 1; n--) {
+      for (let i = 0; i <= aiWords.length - n; i++) {
+        const phrase = aiWords.slice(i, i + n).join(' ');
+        const results = fuse.search(phrase);
+        if (results.length > 0 && results[0].score < 0.4) {
+          referencedSections.add(results[0].item);
         }
-      } catch (error) {
-        console.error(`💥 Error fetching link for "${section.name}":`, error.message)
+      }
+    }
+
+    let sectionLinks = new Map();
+    if (referencedSections.size > 0) {
+      for (const sectionName of referencedSections) {
+        const url = await getSectionLink(sectionName, roleIds);
+        if (url && !url.includes('not available to your role')) {
+          sectionLinks.set(sectionName, url);
+        }
+      }
+    } else {
+      // Fallback: use section embedding on the user's question
+      for (const section of relevantSections) {
+        const url = await getSectionLink(section.name, roleIds);
+        if (url && !url.includes('not available to your role')) {
+          sectionLinks.set(section.name, url);
+        }
       }
     }
 
     if (sectionLinks.size > 0) {
       const rankedLinks = Array.from(sectionLinks.entries())
         .map(([name, url], idx) => `\n🔗 ${idx + 1}. [${name}](${url})`)
-        .join('\n')
-
-      aiReply += `\n\n📌 **You may find more info in these sections:**\n${rankedLinks}`
-    } else {
-      console.warn('⚠️ No links to display from relevant sections.')
+        .join('\n');
+      aiReply += `\n\n📌 **You may find more info in these sections:**\n${rankedLinks}`;
     }
 
-    res.json({ text: aiReply })
+    res.json({ text: aiReply });
   } catch (err) {
     console.error('❌ Error during chat:', err.message)
     res.status(500).json({ text: 'Internal server error.', error: err.message })
