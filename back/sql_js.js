@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs/promises';
-import { getBaseUrl } from './config.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,12 +13,7 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 const ROLE_NAMES = {};
 export { ROLE_NAMES };
 
-
-const BASE_URL = getBaseUrl();
-
-console.log('Base URL from sql.js:', BASE_URL);
-
-// const BASE_URL = 'http://localhost/talenticks_webapp8.1';
+const BaseUrl = 'https://talenticks.meetcs.com/';
 
 
 
@@ -200,7 +194,7 @@ export async function employee_validation(emp_code) {
 }
 
 // ✅ MySQL-compatible getSectionLink function
-export async function getSectionLink(sectionName) {
+export async function getSectionLink(sectionName,BaseUrl) {
   const connection = await getConnection();
 
   try {
@@ -218,7 +212,7 @@ export async function getSectionLink(sectionName) {
     const section = rows[0];
 
     if (section.link && section.link !== '#') {
-      return `${BASE_URL}${section.link}`;
+      return `${BaseUrl}${section.link}`;
     }
 
     // Try to find child section with a valid link
@@ -228,7 +222,7 @@ export async function getSectionLink(sectionName) {
     );
 
     if (childRows.length > 0) {
-      return `${BASE_URL}${childRows[0].link}`;
+      return `${BaseUrl}${childRows[0].link}`;
     }
 
     return `⚠️ "${section.name}" and its subsections have no accessible links.`;

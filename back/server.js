@@ -5,7 +5,6 @@ import fs from 'fs/promises'
 import path from 'path'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 import { fileURLToPath } from 'url'
-import { setBaseUrl } from './config.js'
 import {
   getSectionHierarchyString,
   getSectionLink,
@@ -29,11 +28,6 @@ dotenv.config()
 const app = express()
 const port = process.env.PORT || 3000
 const env = process.env.NODE_ENV || 'development';
-
-// app.use((req) => {
-//   const hostname = req.hostname;
-//   setBaseUrl(hostname); // ✅ set global hostname
-// });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
 const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
@@ -171,7 +165,7 @@ app.post('/employee_validator', async (req, res) => {
 // Chat Endpoint
 app.post('/chat', async (req, res) => {
   try {
-    let { messages, roleIds } = req.body;
+    let { messages, roleIds,BaseUrl } = req.body;
 
     // Normalize roleIds to an array of numbers
     if (typeof roleIds === 'string') {
@@ -182,7 +176,7 @@ app.post('/chat', async (req, res) => {
       // Fallback in case something unexpected comes in
       roleIds = [2, 10, 7];
     }
-
+    // 
 
     const lastUserMsg = [...messages].reverse().find(m => m.role === 'user')
     if (!lastUserMsg) return res.status(400).json({ text: 'No user message found.' })
@@ -269,7 +263,7 @@ ${topQAMatch ? `💡 Matching Q&A:\nQ: ${topQAMatch.question}\nA: ${topQAMatch.a
     for (const section of relevantSections) {
       try {
         console.log(`🔍 Checking section: "${section.name}"`)
-        const url = await getSectionLink(section.name, roleIds)
+        const url = await getSectionLink(section.name,BaseUrl)
         if (url && !url.includes('not available to your role')) {
           sectionLinks.set(section.name, url)
           console.log(`✅ Link found: ${url}`)
