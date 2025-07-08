@@ -278,7 +278,7 @@ ${topQAMatch ? `💡 Matching Q&A:\nQ: ${topQAMatch.question}\nA: ${topQAMatch.a
     let sectionLinks = new Map();
     if (referencedSections.size > 0) {
       for (const sectionName of referencedSections) {
-        const url = await getSectionLink(sectionName, roleIds);
+        const url = await getSectionLink(sectionName, roleIds,BaseUrl);
         if (url && !url.includes('not available to your role')) {
           sectionLinks.set(sectionName, url);
         }
@@ -286,7 +286,7 @@ ${topQAMatch ? `💡 Matching Q&A:\nQ: ${topQAMatch.question}\nA: ${topQAMatch.a
     } else {
       // Fallback: use section embedding on the user's question
       for (const section of relevantSections) {
-        const url = await getSectionLink(section.name, roleIds);
+        const url = await getSectionLink(section.name, roleIds,BaseUrl);
         if (url && !url.includes('not available to your role')) {
           sectionLinks.set(section.name, url);
         }
