@@ -187,7 +187,6 @@ app.post('/chat', async (req, res) => {
 
     // Use the correct FAQ vectors for the current roleIds
     const faqsToUse = getFaqVectorsForRoles(roleIds);
-    console.log(faqsToUse)
     const qaScored = faqsToUse.map(pair => ({
       ...pair,
       score: cosineSimilarity(queryEmbedding, pair.embedding)
@@ -256,39 +255,41 @@ ${topQAMatch ? `💡 Matching Q&A:\nQ: ${topQAMatch.question}\nA: ${topQAMatch.a
 
     let aiReply = chatResponse.response.text()
 
-    // --- Fuzzy matching for section names in aiReply ---
+    // --- Improved section name matching in aiReply ---
     const allSectionNames = sectionEmbeddings.map(sec => sec.name);
-    const fuse = new Fuse(allSectionNames, {
-      includeScore: true,
-      threshold: 0.2, // Lower = stricter, higher = fuzzier
-    });
     const referencedSections = new Set();
-    // Try matching all possible n-grams up to 4 words
-    const aiWords = aiReply.split(/\s+/);
-    for (let n = 4; n >= 1; n--) {
-      for (let i = 0; i <= aiWords.length - n; i++) {
-        const phrase = aiWords.slice(i, i + n).join(' ');
-        const results = fuse.search(phrase);
-        if (results.length > 0 && results[0].score < 0.4) {
-          referencedSections.add(results[0].item);
-        }
+    const aiReplyLower = aiReply.toLowerCase();
+    for (const sectionName of allSectionNames) {
+      // Remove leading dashes and spaces, then lowercase
+      const normalizedSection = sectionName.replace(/^[-\s]+/, '').toLowerCase();
+      if (
+        normalizedSection.length > 3 &&
+        aiReplyLower.includes(normalizedSection)
+      ) {
+        referencedSections.add(sectionName);
       }
     }
 
     let sectionLinks = new Map();
+    const maxLinks = 3;
+    let count = 0;
     if (referencedSections.size > 0) {
       for (const sectionName of referencedSections) {
-        const url = await getSectionLink(sectionName, roleIds,BaseUrl);
+        if (count >= maxLinks) break;
+        const url = await getSectionLink(sectionName, roleIds, BaseUrl);
         if (url && !url.includes('not available to your role')) {
           sectionLinks.set(sectionName, url);
+          count++;
         }
       }
     } else {
       // Fallback: use section embedding on the user's question
       for (const section of relevantSections) {
-        const url = await getSectionLink(section.name, roleIds,BaseUrl);
+        if (count >= maxLinks) break;
+        const url = await getSectionLink(section.name, roleIds, BaseUrl);
         if (url && !url.includes('not available to your role')) {
           sectionLinks.set(section.name, url);
+          count++;
         }
       }
     }
