@@ -5,6 +5,7 @@ import fs from 'fs/promises'
 import path from 'path'
 import { GoogleGenerativeAI } from '@google/generative-ai'
 import { fileURLToPath } from 'url'
+import { setBaseUrl } from './config.js'
 import {
   getSectionHierarchyString,
   getSectionLink,
@@ -27,6 +28,12 @@ dotenv.config()
 
 const app = express()
 const port = process.env.PORT || 3000
+const env = process.env.NODE_ENV || 'development';
+
+// app.use((req) => {
+//   const hostname = req.hostname;
+//   setBaseUrl(hostname); // ✅ set global hostname
+// });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
 const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
@@ -175,17 +182,7 @@ app.post('/chat', async (req, res) => {
       // Fallback in case something unexpected comes in
       roleIds = [2, 10, 7];
     }
-    // If emp_code is provided, validate employee before proceeding
-    // if (emp_code) {
-    //   const validationResult = await employee_validation(emp_code);
-    //   if (!validationResult.valid) {
-    //     return res.json({
-    //       text: '❌ You are not a valid employee. Please contact HR or check your credentials.',
-    //       notValidEmployee: true,
-    //       ...validationResult
-    //     });
-    //   }
-    // }
+
 
     const lastUserMsg = [...messages].reverse().find(m => m.role === 'user')
     if (!lastUserMsg) return res.status(400).json({ text: 'No user message found.' })
@@ -333,7 +330,16 @@ async function startup(roleIds) {
     console.log(`- Manager FAQs: ${faqVectorsMgr.length}`);
     console.log(`- HR FAQs: ${faqVectorsHr.length}`);
 
-    app.listen(port, '0.0.0.0', () => console.log(`🚀 Server running on http://0.0.0.0:${port}`));
+    app.listen(port, '0.0.0.0', () => {
+      let hostURL;
+
+      if (env === 'development') {
+        hostURL = `http://localhost:${port}`;
+      } else {
+        hostURL = `http://0.0.0.0:${port}`;
+
+      } console.log(`🚀 Server running on http://localhost:${port}`)
+    });
   } catch (err) {
     console.error('❌ Startup failed:', err);
     process.exit(1);

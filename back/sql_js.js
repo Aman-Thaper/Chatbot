@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs/promises';
+import { getBaseUrl } from './config.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,7 +14,12 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 const ROLE_NAMES = {};
 export { ROLE_NAMES };
 
-const BASE_URL = 'https://talenticks.meetcs.com/';
+
+const BASE_URL = getBaseUrl();
+
+console.log('Base URL from sql.js:', BASE_URL);
+
+// const BASE_URL = 'http://localhost/talenticks_webapp8.1';
 
 
 
