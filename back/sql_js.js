@@ -24,9 +24,9 @@ export let faqVectorsHr = [];
 
 export async function loadAllFaqVectors() {
   try {
-    faqVectorsEmp = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'data', 'faq_vectors_emp.json'), 'utf8'));
-    faqVectorsMgr = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'data', 'faq_vectors_mgr.json'), 'utf8'));
-    faqVectorsHr = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'data', 'faq_vectors_hr.json'), 'utf8'));
+    faqVectorsEmp = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'data', 'faq_vectors_emp_ollama.json'), 'utf8'));
+    faqVectorsMgr = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'data', 'faq_vectors_mgr_ollama.json'), 'utf8'));
+    faqVectorsHr = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'data', 'faq_vectors_hr_ollama.json'), 'utf8'));
     console.log(`✅ Loaded FAQs - Emp:${faqVectorsEmp.length} Mgr:${faqVectorsMgr.length} HR:${faqVectorsHr.length}`);
   } catch (err) {
     console.error('❌ Error loading FAQ vectors:', err.message);
@@ -273,7 +273,7 @@ export async function getFAQsByRoles(roleIds) {
   }
 }
 
-function getFaqVectorsForRoles(roleIds) {
+function getFaqVectorsForRoles(roleIds = [2, 10, 7]) {
   // Always include employee FAQ
   // See what it actually is
   let faqs = [...faqVectorsEmp];
